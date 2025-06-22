@@ -20,7 +20,7 @@ If you're a reviewer, thank you for evaluating this work!
 
 ---
 
-
+```plaintext
 | File                                         | Description                                   |
 | -------------------------------------------- | --------------------------------------------- |
 | requirements.txt`                            | dependecies and packages                      |
@@ -32,26 +32,34 @@ If you're a reviewer, thank you for evaluating this work!
 | `mixed_reuters_20ng_synthetic_style_org.csv` | Synthetic benchmark dataset                   |
 | `stopwords-fi.txt`                           | Finnish stopwords used in preprocessing       |
 | `.png / .pdf files`                          | Evaluation and visualization outputs          |
+```
 
 
 
+
+# 🚀 How to Run
+```bash
 git clone https://github.com/seyedeh-mona-ebrahimi/COCNMF.git
 cd COCNMF
+```
 
-# (Recommended) create and activate a fresh virtual environment first
+## (Recommended) create and activate a fresh virtual environment first
+```bash
 python -m venv .venv
 source .venv/bin/activate   # Linux/macOS
 # .\.venv\Scripts\activate   # Windows PowerShell
+```
 
-# Install dependencies
+### Install dependencies
+```bash
 pip install --upgrade pip
 pip install -r requirements.txt
+```
 
 
 
 
-
-### 🚀 Run the Main Pipeline
+## 🚀 Run the Main Pipeline
 
 > To **train the model** and evaluate it:
 
