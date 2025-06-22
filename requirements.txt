@@ -1,14 +1,10 @@
-# Core numerical & data handling
+
 numpy>=1.24
 pandas>=2.0
 scipy>=1.10
-
-# Machine learning & clustering
 scikit-learn>=1.4
 optuna>=3.5          # hyper-parameter tuning
 joblib>=1.3          # parallelism backend used by scikit-learn
-
-# Topic modelling & NLP
 gensim>=4.3
 nltk>=3.8
 
