@@ -18,5 +18,11 @@ This repository implements the algorithm proposed in our paper and provides a re
 git clone https://github.com/seyedeh-mona-ebrahimi/COCNMF.git
 cd COCNMF
 
+# (Recommended) create and activate a fresh virtual environment first
+python -m venv .venv
+source .venv/bin/activate   # Linux/macOS
+# .\.venv\Scripts\activate   # Windows PowerShell
 
+# Install dependencies
+pip install --upgrade pip
 pip install -r requirements.txt
