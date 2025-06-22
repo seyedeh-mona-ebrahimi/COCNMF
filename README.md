@@ -1,18 +1,21 @@
 🧠 COCNMF: Cluster-Oriented Constrained Non-negative Matrix Factorization
 
-COCNMF is a semi-supervised topic modeling and document clustering algorithm designed for discovering minority topics, such as mental health themes, using seed word constraints and joint clustering structure.
+COCNMF is a joint cluster-topic modeling algorithm designed to discover minority topics, such as mental health themes, utilizing seed word constraints and a joint clustering structure.
 
-This repository implements the algorithm proposed in our paper and provides a reproducible pipeline for evaluating performance on synthetic datasets (e.g., blended Reuters + 20 Newsgroups).
+This repository implements the algorithm proposed in our paper and provides a reproducible pipeline for evaluating performance on synthetic datasets (e.g., blended Reuters + 20 Newsgroups and mental health social media documents).
 
 | File                                         | Description                                   |
 | -------------------------------------------- | --------------------------------------------- |
+| requirements.txt`                            | dependecies and packages                      |
 | `run.py`                                     | Main script to train the COCNMF model         |
 | `eval.py`                                    | The main evaluation script                    |
+| `cmtm_Algorithm.py`                          | The main algorithm adopted for evaluation     |
 | `t_test_run.py`                              | T-test based comparison of clustering results |
 | `param_tuning.py`                            | Hyperparameter tuning script                  |
 | `mixed_reuters_20ng_synthetic_style_org.csv` | Synthetic benchmark dataset                   |
 | `stopwords-fi.txt`                           | Finnish stopwords used in preprocessing       |
 | `.png / .pdf files`                          | Evaluation and visualization outputs          |
+
 
 
 git clone https://github.com/seyedeh-mona-ebrahimi/COCNMF.git
@@ -26,3 +29,34 @@ source .venv/bin/activate   # Linux/macOS
 # Install dependencies
 pip install --upgrade pip
 pip install -r requirements.txt
+
+
+
+
+
+### 🚀 Run the Main Pipeline
+
+> To **train the model** and evaluate it:
+
+```bash
+python run.py
+```
+
+> To **evaluate the model across various baselines** :
+
+```bash
+python eval.py
+```
+
+
+> To **tune parameters** over a grid:
+```bash
+python param_tuning.py
+```
+
+
+> To run t-tests comparing different model variants:
+
+```bash
+python t_test_run.py
+```
