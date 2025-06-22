@@ -4,9 +4,9 @@ import random
 import re
 import string
 import nltk
-# nltk.download('punkt')
-# nltk.download('stopwords')
-# nltk.download('wordnet')
+nltk.download('punkt')
+nltk.download('stopwords')
+nltk.download('wordnet')
 from gensim import corpora
 from gensim.models.ldamodel import LdaModel
 from sklearn.feature_extraction.text import CountVectorizer
@@ -22,10 +22,9 @@ from gensim import corpora
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 from nltk.tokenize import word_tokenize
-#from main import seed_words
-from main01 import full_training_loop
+from run import full_training_loop
 from ours import purity_score_filtered
-from OurAlgorithm import *
+from cmtm_Algorithm import *
 from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
 from gensim.corpora import Dictionary
