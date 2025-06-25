@@ -28,14 +28,14 @@ from gensim.models.coherencemodel import CoherenceModel
 from sklearn.manifold import TSNE
 import time
 from scipy.optimize import linear_sum_assignment
-
 import scipy.sparse as sp
 import time
 from numpy.linalg import norm
 import numpy as np
 from scipy.sparse import csr_matrix
 from scipy.sparse import issparse
-
+import matplotlib.pyplot as plt
+from scipy.stats import ttest_rel
 
 
 
@@ -376,31 +376,6 @@ for seed in [42, 1122, 7, 99, 2025, 1234]:
     #NMI and Ourity Scores for the topic modeling
     ###########################################################################
 
-    labels_sep_topic= np.argmax(W_sep, axis=1)
-    filtered_labels_sep_topic = labels_sep_topic[valid_idx]
-    purity_sep_topic = purity_score_filtered(filtered_ytrue, filtered_labels_sep_topic, exclude_labels_from_majority=[], exclude_labels_from_purity=[])
-    nmi_sep_topic = normalized_mutual_info_score(filtered_ytrue, filtered_labels_sep_topic)
-    ari_sep_topic= adjusted_rand_score(filtered_ytrue, filtered_labels_sep_topic)
-    acc_sep_topic= clustering_accuracy(filtered_ytrue, filtered_labels_sep_topic)
-    print("\n=== 📊 Document-Level Topic Quality Comparison ===")
-    print("🔹 Separate Topic Model (Separate Model):")
-    print(f"  - Accuracy Topics:    {acc_sep_topic:.4f}")
-    print(f"  - NMI:                {nmi_sep_topic:.4f}")
-    print(f"  - Purity:             {purity_sep_topic:.4f}")
-    #print(f"  - Adjusted Rand:      {ari_sep_topic:.4f}")
-
-    labels_int_topic= np.argmax(W_combined, axis=1)
-    filtered_labels_int_topic = labels_int_topic[valid_idx]
-    purity_int_topic = purity_score_filtered(filtered_ytrue, filtered_labels_int_topic, exclude_labels_from_majority=[], exclude_labels_from_purity=[])
-    nmi_int_topic = normalized_mutual_info_score(filtered_ytrue, filtered_labels_int_topic)
-    ari_int_topic = adjusted_rand_score(filtered_ytrue, filtered_labels_int_topic)
-    acc_int_topic= clustering_accuracy(filtered_ytrue, filtered_labels_int_topic)
-    print("\n🔸 Integrated Topic Model (Joint Model):")
-    print(f"  - Accuracy Topics:    {acc_int_topic:.4f}")
-    print(f"  - NMI:                {nmi_int_topic:.4f}")
-    print(f"  - Purity:             {purity_int_topic:.4f}")
-    #print(f"  - Adjusted Rand:      {ari_int_topic:.4f}")
-
 
 # 🧪 Then compute all your evaluation metrics:
     metrics = {
@@ -434,13 +409,6 @@ for seed in [42, 1122, 7, 99, 2025, 1234]:
 df = pd.DataFrame(all_results)
 df.to_csv("20newsgroup_reuters/all_seed_results.csv", index=False)
 
-
-
-
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-from scipy.stats import ttest_rel
 
 # Load your file
 df = pd.read_csv("20newsgroup_reuters/all_seed_results.csv")
