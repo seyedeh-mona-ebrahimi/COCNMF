@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the following metadata."
+authors:
+  - family-names: "Ebrahimi"
+    given-names: "Seyedeh Fatemeh"
+  - family-names: "Peltonen"
+    given-names: "Jaakko"
+title: "Constrained Non-negative Matrix Factorization and Guided Topic Modeling for Minority Topics"
+references:
+  - type: conference-paper
+    authors:
+      - family-names: "Ebrahimi"
+        given-names: "Seyedeh Fatemeh"
+      - family-names: "Peltonen"
+        given-names: "Jaakko"
+    title: "Constrained Non-negative Matrix Factorization for Guided Topic Modeling of Minority Topics"
+    collection-title: "Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing"
+    year: 2025
+  - type: conference-paper
+    authors:
+      - family-names: "Ebrahimi"
+        given-names: "Seyedeh Fatemeh"
+      - family-names: "Peltonen"
+        given-names: "Jaakko"
+    title: "Voices Between Lines: Interpretable Labeling of Mental Health Minority Topics with Seed Guidance and LLMs"
+    collection-title: "ECML PKDD 2025"
+    year: 2026
+    doi: "10.1007/978-3-032-19105-2_19"
+  - type: conference-paper
+    authors:
+      - family-names: "Ebrahimi"
+        given-names: "Seyedeh Fatemeh"
+      - family-names: "Peltonen"
+        given-names: "Jaakko"
+    title: "Nonnegative Matrix Factorization for Joint Clustering and Topic Modeling with Minority Topics"
+    collection-title: "ICONIP 2025"
+    year: 2026
+    doi: "10.1007/978-981-95-4367-0_33"
