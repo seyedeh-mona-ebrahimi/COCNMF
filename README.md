@@ -4,8 +4,8 @@
 
 If you use this code or the methods described in our papers, please cite the following:
 
+### ICONIP 2025 - Joint modeling of Constrained Clustering & Topic Modeling
 ```bibtex
-ICONIP 2025 - Joint Clustering & Topic Modeling
 @inproceedings{ebrahimi2026nmf,
   author    = {Ebrahimi, Seyedeh Fatemeh and Peltonen, Jaakko},
   title     = {Nonnegative Matrix Factorization for Joint Clustering and Topic Modeling with Minority Topics},
