@@ -1,5 +1,23 @@
 🧠 COCNMF: Cluster-Oriented Constrained Non-negative Matrix Factorization
 
+## Citation
+
+If you use this code or the methods described in our papers, please cite the following:
+
+```bibtex
+ICONIP 2025 - Joint Clustering & Topic Modeling
+@inproceedings{ebrahimi2026nmf,
+  author    = {Ebrahimi, Seyedeh Fatemeh and Peltonen, Jaakko},
+  title     = {Nonnegative Matrix Factorization for Joint Clustering and Topic Modeling with Minority Topics},
+  booktitle = {Neural Information Processing. ICONIP 2025},
+  series    = {Lecture Notes in Computer Science},
+  volume    = {16309},
+  year      = {2026},
+  publisher = {Springer, Singapore},
+  doi       = {10.1007/978-981-95-4367-0_33}
+}
+```
+
 COCNMF is a joint cluster-topic modeling algorithm designed to discover minority topics, such as mental health themes, utilizing seed word constraints and a joint clustering structure.
 
 This repository implements the algorithm proposed in our paper and provides a reproducible pipeline for evaluating performance on synthetic datasets (e.g., blended Reuters + 20 Newsgroups and mental health social media documents).
